@@ -1,0 +1,23 @@
+<%- include("templates/header") %> 
+
+<div class="px-4 pt-5 my-5 text-center">
+  <h1 class="display-4 fw-bold text-body-emphasis">Welcome back, <%= username %>!</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">Together, make the planet better place for our fluffy friend to live!</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+      <form action='/members' method='get' style='margin-block-end: 0; display: inline'> 
+        <button type ='submit'class="btn btn-primary btn-sm">Go to Members Ares</button>
+      </form>
+      <form action='/logout' method='get' style="display: inline"> 
+      <button type ='submit'class="btn btn-secondary btn-sm">Logout</button>
+      </form>
+    </div>
+  </div>
+  <div class="overflow-hidden" style="max-height: 40vh;">
+    <div class="container px-5">
+      <img src="/img/cat-hero.jpeg" class="img-fluid rounded-3 mb-4" alt="Example image" width="700" height="500" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<%- include("templates/footer") %> 

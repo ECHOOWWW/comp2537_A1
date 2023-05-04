@@ -1,0 +1,24 @@
+<%- include("templates/header") %> 
+  <h2>Users</h2>
+  <div>
+      <% let i=0; %>
+  <% for(i=0; i < users.length; i++) { %>
+      <%- include('templates/user', {user: users[i]})  %> 
+      <% } %> 
+  </div>
+<%- include("templates/footer") %> 
+
+<script>
+  function promoteToAdmin(username) {
+    if (confirm('Are you sure you want to promote ' + username + ' to admin?')) {
+      window.location.href = '/promote/' + username;
+    }
+  }
+
+  function demoteToUser(username) {
+    if (confirm('Are you sure you want to demote ' + username + ' to user?')) {
+      window.location.href = '/demote/' + username;
+    }
+  }
+</script>
+
